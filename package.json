@@ -1,0 +1,25 @@
+{
+  "name": "zeplin-emotion",
+  "version": "0.1.0",
+  "description": "Extension to translate styles to emotion.",
+  "scripts": {
+    "start": "zem start",
+    "build": "zem build",
+    "clean": "zem clean",
+    "exec": "zem exec",
+    "publish": "zem publish"
+  },
+  "zeplin": {
+    "displayName": "zeplin-emotion",
+    "platforms": [
+      "web",
+      "osx"
+    ]
+  },
+  "dependencies": {
+    "zem": "^0.4.3"
+  },
+  "devDependencies": {
+    "typescript": "^3.5.3"
+  }
+}
