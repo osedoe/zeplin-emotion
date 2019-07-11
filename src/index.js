@@ -2,7 +2,7 @@
  * Export functions you want to work with, see documentation for details:
  * https://github.com/zeplin/zeplin-extension-documentation
  */
-const parseString = require("./utils/parseString");
+const { parseString } = require("./utils/parseString");
 
 function layer(context, selectedLayer) {
   // const containerType = "styleguide" in context ? "styleguide" : "project";
