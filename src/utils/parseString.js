@@ -1,4 +1,4 @@
-export function nameParser(fragment: string) {
+function parseString(fragment) {
   const regex = /[^0-9a-z ]/gi;
   const afterRegEx = fragment.replace(regex, ' ');
   const arrayOfWords = afterRegEx
@@ -15,3 +15,6 @@ export function nameParser(fragment: string) {
   return parsedString.join('');
 }
 
+module.exports = {
+  parseString
+};

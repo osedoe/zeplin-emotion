@@ -2,25 +2,26 @@
  * Export functions you want to work with, see documentation for details:
  * https://github.com/zeplin/zeplin-extension-documentation
  */
+const parseString = require("./utils/parseString");
 
 function layer(context, selectedLayer) {
-    // const containerType = "styleguide" in context ? "styleguide" : "project";
-    // const object = {
-    //     layerName: selectedLayer.name,
-    //     [`${containerType}Name`]: context[containerType].name,
-    //     // context: context
-    // };
-    //
-    // const JSONString = JSON.stringify(object, null, 2);
-    //
-    // return {
-    //     code: JSONString,
-    //     language: "json"
-    // };
+  // const containerType = "styleguide" in context ? "styleguide" : "project";
+  // const object = {
+  //     layerName: selectedLayer.name,
+  //     [`${containerType}Name`]: context[containerType].name,
+  //     // context: context
+  // };
+  //
+  // const JSONString = JSON.stringify(object, null, 2);
+  //
+  // return {
+  //     code: JSONString,
+  //     language: "json"
+  // };
 
-    console.log({selectedLayer});
+  const {name} = selectedLayer;
 
-    return `const ${selectedLayer.name} = styled.div
+  return `const ${parseString(name)} = styled.div
     fills: ${JSON.stringify(selectedLayer.fills, null, 2)}
     `;
 }
@@ -30,7 +31,7 @@ function screen(context, selectedVersion, selectedScreen) {
 }
 
 function component(context, selectedVersion, selectedComponent) {
-    console.log(selectedComponent);
+  console.log(selectedComponent);
 }
 
 function colors(context) {
@@ -76,16 +77,16 @@ function comment(context, text) {
 }
 
 export default {
-    layer,
-    screen,
-    component,
-    colors,
-    textStyles,
-    exportColors,
-    exportTextStyles,
-    styleguideColors,
-    styleguideTextStyles,
-    exportStyleguideColors,
-    exportStyleguideTextStyles,
-    comment
+  layer,
+  screen,
+  component,
+  colors,
+  textStyles,
+  exportColors,
+  exportTextStyles,
+  styleguideColors,
+  styleguideTextStyles,
+  exportStyleguideColors,
+  exportStyleguideTextStyles,
+  comment
 };
